@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: #f6e6e0;
+    color: #333;
+    padding: 2rem; /* Make the header big */
+    height: auto; /* Allow the height to adjust based on content */
+
+    /* Add the following styles to position the content to opposite sides */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items evenly along the header */
+}
+
+.profile-picture {
+    width: 50px; /* Adjust the picture size as needed */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem; /* Add some spacing between the picture and name */
+    border: 2px solid #333; /* Add a border around the picture */
+}
+
+/* Use inline-flex to position the profile picture and name side by side */
+.picture-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Add styles for the div containing the buttons and social icons */
+.button-container, .social-icons-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Add styles for the buttons */
+.button {
+    width: 40px; /* Adjust the button size to make it smaller */
+    height: 40px;
+    border-radius: 50%; /* Make the button circular */
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+/* Add hover effect for buttons */
+.button:hover {
+    opacity: 0.5;
+}
+
+/* Add styles for the social icons */
+.social-icons-container {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 13rem; /* Add some spacing between the social icons and buttons */
+}
+
+.social-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.1rem; /* Add some spacing between the social icons */
+    transition: opacity 0.3s; /* Add transition effect for opacity change */
+}
+
+/* Add hover effect for social icons */
+.social-button:hover {
+    background-color: #f6e6e0;
+    opacity: 0.5; /* Adjust the opacity on hover */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1rem; /* Reduce the header padding on smaller screens */
+    }
+}
+
+.moved-down {
+    align-self: flex-end;
+    margin-top: 5rem;
+}
+
+

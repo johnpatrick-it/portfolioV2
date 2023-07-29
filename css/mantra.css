@@ -1,0 +1,108 @@
+.mantra {
+    text-align: center;
+}
+
+/* Style for the h1 element */
+
+/* Style for the h2 element */
+h2.process2 {
+    font-size: 50px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Style for the h3 element */
+h3.process3 {
+    font-size: 40px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Style for the h4 element */
+h4.process4 {
+    font-size: 30px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Responsive styles (optional) */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+}
+.fade-h4 {
+    font-size: 25px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h4.fade-out {
+    opacity: 0.7;
+}
+.fade-h42 {
+    font-size: 20px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h42.fade-out2 {
+    opacity: 0.5;
+}
+.fade-h43 {
+    font-size: 15px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h43.fade-out3 {
+    opacity: 0.4;
+}
+.fade-h44 {
+    font-size: 12px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h44.fade-out4 {
+    opacity: 0.3;
+}
+.fade-h45 {
+    font-size: 10px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h45.fade-out5 {
+    opacity: 0.2;
+}
+.fade-h46 {
+    font-size: 8px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h46.fade-out6 {
+    opacity: 0.1;
+}

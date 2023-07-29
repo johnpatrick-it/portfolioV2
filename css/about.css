@@ -1,0 +1,144 @@
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        
+
+    }
+    h1.about {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 25px ;
+    }
+    .sub-container {
+    width: 100%;
+    }
+
+    .column {
+    width: 100%; 
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border-radius: 10px;
+    }
+
+    .image-container {
+    text-align: center; /* Center the image horizontally within the container */
+    position: relative; /* Set position to create a stacking context */
+    height: 200px; /* Set a fixed height to contain the images */
+
+    }
+
+    .image-container img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%; /* Make the image circular */
+        width: 200px; /* Set an initial width */
+        height: 200px; /* Set an initial height */
+        object-fit: cover; /* Preserve the aspect ratio and cover the container */
+        overflow: hidden; /* Hide any parts of the image that exceed the circular shape */
+        text-align: center;
+    }
+    .column .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    }
+    .dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .active {
+    background-color: #717171;
+    }
+    p.details {
+        font-family: 'Poppins', sans-serif;}
+    li.details{
+        font-family: 'Poppins', sans-serif;
+    }
+    .bold-text {
+      font-weight: bold !important;
+  }
+  
+    .body-content {
+        margin: 2px;
+        margin-right: 40px;
+        
+    }
+    .fonts{
+        font-family: 'Barlow', sans-serif;
+    }
+    .project {
+        margin: 2px;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .my-gif {
+        width: 500px;
+        height: 440px;
+        border-radius: 10px;
+      }
+
+      .highlight {
+        color: #FFCC00;
+      }
+      h1.classic {
+        text-align: center;
+        font-family: 'Barlow', sans-serif;
+        margin-left: 25px ;
+        font-size: 25px;
+      }
+      .development{
+        font-family: 'Barlow', sans-serif;
+      }
+      .my-gif-telephone {
+        width: 440px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .contact {
+        margin: 2px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-wrapper {
+        text-align: left; /* this will align the text to the left */
+        max-width: 600px; /* optional: use this to limit how wide the text can go */
+        display: inline-block; /* this makes the div as wide as its contents, allowing it to be centered correctly */
+      }
+      .gif-cat {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+            
+      
+      
