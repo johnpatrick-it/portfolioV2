@@ -38,7 +38,435 @@ footer {
 footer p {
   margin: 0;
   text-align: center;
+  
 }
+body {
+        max-width: 100%;
+        overflow-x: hidden;
+        
+
+    }
+    h1.about {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 25px ;
+    }
+    .sub-container {
+    width: 100%;
+    }
+
+    .column {
+    width: 100%; 
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border-radius: 10px;
+    }
+
+    .image-container {
+    text-align: center; /* Center the image horizontally within the container */
+    position: relative; /* Set position to create a stacking context */
+    height: 200px; /* Set a fixed height to contain the images */
+
+    }
+
+    .image-container img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%; /* Make the image circular */
+        width: 200px; /* Set an initial width */
+        height: 200px; /* Set an initial height */
+        object-fit: cover; /* Preserve the aspect ratio and cover the container */
+        overflow: hidden; /* Hide any parts of the image that exceed the circular shape */
+        text-align: center;
+    }
+    .column .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+    .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+    }
+    .dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .active {
+    background-color: #717171;
+    }
+    p.details {
+        font-family: 'Poppins', sans-serif;}
+    li.details{
+        font-family: 'Poppins', sans-serif;
+    }
+    .bold-text {
+      font-weight: bold !important;
+  }
+  
+    .body-content {
+        margin: 2px;
+        margin-right: 40px;
+        
+    }
+    .fonts{
+        font-family: 'Barlow', sans-serif;
+    }
+    .project {
+        margin: 2px;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .my-gif {
+        width: 500px;
+        height: 440px;
+        border-radius: 10px;
+      }
+
+      .highlight {
+        color: #FFCC00;
+      }
+      h1.classic {
+        text-align: center;
+        font-family: 'Barlow', sans-serif;
+        margin-left: 25px ;
+        font-size: 25px;
+      }
+      .development{
+        font-family: 'Barlow', sans-serif;
+      }
+      .my-gif-telephone {
+        width: 440px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      .contact {
+        margin: 2px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-wrapper {
+        text-align: left; /* this will align the text to the left */
+        max-width: 600px; /* optional: use this to limit how wide the text can go */
+        display: inline-block; /* this makes the div as wide as its contents, allowing it to be centered correctly */
+      }
+      .gif-cat {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+            
+      
+      body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: #f6e6e0;
+    color: #333;
+    padding: 2rem; /* Make the header big */
+    height: auto; /* Allow the height to adjust based on content */
+
+    /* Add the following styles to position the content to opposite sides */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items evenly along the header */
+}
+
+.profile-picture {
+    width: 50px; /* Adjust the picture size as needed */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem; /* Add some spacing between the picture and name */
+    border: 2px solid #333; /* Add a border around the picture */
+}
+
+/* Use inline-flex to position the profile picture and name side by side */
+.picture-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Add styles for the div containing the buttons and social icons */
+.button-container, .social-icons-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Add styles for the buttons */
+.button {
+    width: 40px; /* Adjust the button size to make it smaller */
+    height: 40px;
+    border-radius: 50%; /* Make the button circular */
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+/* Add hover effect for buttons */
+.button:hover {
+    opacity: 0.5;
+}
+
+/* Add styles for the social icons */
+.social-icons-container {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 13rem; /* Add some spacing between the social icons and buttons */
+}
+
+.social-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.1rem; /* Add some spacing between the social icons */
+    transition: opacity 0.3s; /* Add transition effect for opacity change */
+}
+
+/* Add hover effect for social icons */
+.social-button:hover {
+    background-color: #f6e6e0;
+    opacity: 0.5; /* Adjust the opacity on hover */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1rem; /* Reduce the header padding on smaller screens */
+    }
+}
+
+.moved-down {
+    align-self: flex-end;
+    margin-top: 5rem;
+}
+
+
+.mantra {
+    text-align: center;
+}
+
+/* Style for the h1 element */
+
+/* Style for the h2 element */
+h2.process2 {
+    font-size: 50px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Style for the h3 element */
+h3.process3 {
+    font-size: 40px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Style for the h4 element */
+h4.process4 {
+    font-size: 30px;
+    margin: 5px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Responsive styles (optional) */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+}
+.fade-h4 {
+    font-size: 25px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h4.fade-out {
+    opacity: 0.7;
+}
+.fade-h42 {
+    font-size: 20px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h42.fade-out2 {
+    opacity: 0.5;
+}
+.fade-h43 {
+    font-size: 15px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h43.fade-out3 {
+    opacity: 0.4;
+}
+.fade-h44 {
+    font-size: 12px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h44.fade-out4 {
+    opacity: 0.3;
+}
+.fade-h45 {
+    font-size: 10px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h45.fade-out5 {
+    opacity: 0.2;
+}
+.fade-h46 {
+    font-size: 8px;
+    margin: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Barlow', sans-serif;
+}
+
+.fade-h46.fade-out6 {
+    opacity: 0.1;
+}
+.row {
+    display: flex;
+    justify-content: center; /* This spaces out the columns so they don't touch each other */
+    margin: 0 auto; /* Centers the row on the page */
+    width: 252; /* The width of the row relative to its parent element */
+    padding: 1rem;
+    box-sizing: border-box;
+    
+    
+}
+
+.column-tools {
+
+    display: flex;
+    flex-direction: column; /* This stacks the image and remarks on top of each other */
+    width: 252px; 
+    margin: 1rem; /* Centers the column on the page */
+    background: #f2f2f2;
+    border: 1px solid #000;
+    border-left: 1px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+.image {
+    height: 226px;
+    width: 252px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+    border-bottom: 1px #292929;
+    background-color: #171717;
+    object-fit: scale-down;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 10px;
+}
+
+.remarks {
+    height: 147px; /* Half the height of the column */
+    overflow: hidden; /* Allows for scrolling if the remarks are too long */
+    background-color: #292929;
+    width: 252px;
+    border-end-end-radius: 10px;
+    border-bottom-left-radius:7px;
+}
+.lang {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+hr.border {
+    border: 1px solid black;
+}
+.phead{
+    color: grey;
+    margin: 10px;
+    opacity: 0.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+.pbody{
+    color: rgb(173, 167, 167);
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+a:hover {
+    color: rgb(61, 54, 54);
+}
+
 
     
     </style>
