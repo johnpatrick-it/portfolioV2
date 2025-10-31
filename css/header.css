@@ -1,15 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+/* Body styles moved to main.css to avoid conflicts */
 
 header {
-    background-color: #f6e6e0;
-    color: #333;
+    background-color: var(--header-background);
+    color: var(--text-color);
     padding: 2rem; /* Make the header big */
     height: auto; /* Allow the height to adjust based on content */
 
@@ -17,6 +10,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space items evenly along the header */
+    transition: background-color 0.3s ease;
 }
 
 .profile-picture {
@@ -24,7 +18,8 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 1rem; /* Add some spacing between the picture and name */
-    border: 2px solid #333; /* Add a border around the picture */
+    border: 2px solid var(--text-color); /* Add a border around the picture */
+    transition: border-color 0.3s ease;
 }
 
 /* Use inline-flex to position the profile picture and name side by side */
@@ -45,13 +40,13 @@ header {
     height: 40px;
     border-radius: 50%; /* Make the button circular */
     background-color: transparent;
-    color: #333;
+    color: var(--text-color);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, color 0.3s ease;
 }
 
 /* Add hover effect for buttons */
@@ -71,14 +66,14 @@ header {
     height: 30px;
     border-radius: 50%;
     background-color: transparent;
-    color: #333;
+    color: var(--text-color);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0.1rem; /* Add some spacing between the social icons */
-    transition: opacity 0.3s; /* Add transition effect for opacity change */
+    transition: opacity 0.3s, color 0.3s ease, background-color 0.3s ease; /* Add transition effect for opacity change */
 }
 
 /* Add hover effect for social icons */
@@ -88,9 +83,50 @@ header {
 }
 
 /* Responsive styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     header {
-        padding: 1rem; /* Reduce the header padding on smaller screens */
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-icons-container {
+        margin-right: 0;
+        order: 1;
+    }
+
+    .picture-container {
+        order: 2;
+    }
+
+    .button-container {
+        order: 3;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .picture-container b {
+        font-size: 14px;
+    }
+
+    .social-button {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.5rem;
+    }
+
+    .button {
+        width: 35px;
+        height: 35px;
     }
 }
 

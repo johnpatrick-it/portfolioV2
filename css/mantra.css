@@ -25,19 +25,78 @@ h4.process4 {
     font-family: 'Barlow', sans-serif;
 }
 
-/* Responsive styles (optional) */
-@media only screen and (max-width: 600px) {
-    h1 {
-        font-size: 40px;
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    h2.process2 {
+        font-size: 35px;
     }
-    h2 {
-        font-size: 30px;
+    h3.process3 {
+        font-size: 28px;
     }
-    h3 {
-        font-size: 25px;
+    h4.process4 {
+        font-size: 22px;
     }
-    h4 {
-        font-size: 20px;
+    .fade-h4 {
+        font-size: 18px;
+    }
+    .fade-h42 {
+        font-size: 16px;
+    }
+    .fade-h43 {
+        font-size: 12px;
+    }
+    .fade-h44 {
+        font-size: 10px;
+    }
+    .fade-h45 {
+        font-size: 8px;
+    }
+    .fade-h46 {
+        font-size: 6px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mantra {
+        padding: 1rem 0.5rem;
+        overflow-x: hidden;
+    }
+
+    h2.process2 {
+        font-size: 22px;
+        word-break: break-word;
+    }
+    h3.process3 {
+        font-size: 18px;
+        word-break: break-word;
+    }
+    h4.process4 {
+        font-size: 16px;
+        word-break: break-word;
+    }
+    .fade-h4 {
+        font-size: 13px;
+        word-break: break-word;
+    }
+    .fade-h42 {
+        font-size: 11px;
+        word-break: break-word;
+    }
+    .fade-h43 {
+        font-size: 9px;
+        word-break: break-word;
+    }
+    .fade-h44 {
+        font-size: 7px;
+        word-break: break-word;
+    }
+    .fade-h45 {
+        font-size: 6px;
+        word-break: break-word;
+    }
+    .fade-h46 {
+        font-size: 5px;
+        word-break: break-word;
     }
 }
 .fade-h4 {

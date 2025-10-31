@@ -1,0 +1,426 @@
+/* CSS Variables for Light Mode (Default) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --border-color: #000000;
+    --header-background: #f6e6e0;
+    --footer-background: #f0f0f0;
+    --projects-background: #f9f9f9;
+    --column-background: #f2f2f2;
+    --tool-image-background: #171717;
+    --tool-remarks-background: #292929;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode explicit styles */
+[data-theme="light"] {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --border-color: #000000;
+    --header-background: #f6e6e0;
+    --footer-background: #f0f0f0;
+    --projects-background: #f9f9f9;
+    --column-background: #f2f2f2;
+    --tool-image-background: #171717;
+    --tool-remarks-background: #292929;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-background: #2d2d2d;
+    --border-color: #444444;
+    --header-background: #2a2a2a;
+    --footer-background: #1f1f1f;
+    --projects-background: #1e1e1e;
+    --column-background: #2d2d2d;
+    --tool-image-background: #0d0d0d;
+    --tool-remarks-background: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme variables to body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main styles and footer */
+footer {
+    background-color: var(--footer-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Modal styles */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+#modal-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#btnClose {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnClose:hover {
+    background-color: #555;
+}
+
+/* Responsive improvements */
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 15px;
+    }
+
+    #modal-text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .modal-content {
+        margin: 25% auto;
+        padding: 10px;
+    }
+
+    #modal-text {
+        font-size: 14px;
+    }
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 2rem 1rem;
+    background-color: var(--projects-background);
+    transition: background-color 0.3s ease;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.project-card {
+    background: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.coming-soon i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-family: 'Barlow', sans-serif;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.tech-tag {
+    background: #e8f4f8;
+    color: #2c5282;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Barlow', sans-serif;
+}
+
+.project-link:hover {
+    background: #555;
+    color: white;
+}
+
+.project-link.disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.project-link.disabled:hover {
+    background: #ccc;
+    color: #666;
+}
+
+/* Mobile responsive for projects */
+@media only screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .project-link {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .projects-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .project-image {
+        height: 160px;
+    }
+
+    .coming-soon i {
+        font-size: 2rem;
+    }
+
+    .coming-soon p {
+        font-size: 1rem;
+    }
+
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .project-description {
+    color: #b0b0b0;
+}
+
+[data-theme="dark"] .tech-tag {
+    background: #2a4a5a;
+    color: #87ceeb;
+}
+
+[data-theme="dark"] .coming-soon {
+    background: linear-gradient(135deg, #4a5568 0%, #553c9a 100%);
+}
+
+[data-theme="dark"] .social-button:hover {
+    background-color: #444;
+}
+
+[data-theme="dark"] .phead {
+    color: #999;
+}
+
+[data-theme="dark"] .pbody {
+    color: #ccc;
+}
+
+[data-theme="dark"] a {
+    color: #87ceeb;
+}
+
+[data-theme="dark"] a:hover {
+    color: #add8e6;
+}
+
+/* Light mode specific adjustments for better contrast */
+[data-theme="light"] .project-description {
+    color: #666;
+}
+
+[data-theme="light"] .tech-tag {
+    background: #e8f4f8;
+    color: #2c5282;
+}
+
+[data-theme="light"] .phead {
+    color: grey;
+}
+
+[data-theme="light"] .pbody {
+    color: rgb(173, 167, 167);
+}
+
+[data-theme="light"] a {
+    color: inherit;
+}
+
+[data-theme="light"] a:hover {
+    color: rgb(61, 54, 54);
+}
+
+[data-theme="light"] .social-button:hover {
+    background-color: #f6e6e0;
+}
+
+/* FORCE LIGHT MODE STYLES - HIGH SPECIFICITY */
+html[data-theme="light"] body,
+html[data-theme="light"],
+body[data-theme="light"],
+[data-theme="light"] body {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+html[data-theme="light"] header,
+[data-theme="light"] header {
+    background-color: #f6e6e0 !important;
+    color: #333333 !important;
+}
+
+html[data-theme="light"] .column,
+[data-theme="light"] .column {
+    background-color: #f2f2f2 !important;
+    color: #333333 !important;
+}
+
+html[data-theme="light"] .project-card,
+[data-theme="light"] .project-card {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+}
+
+html[data-theme="light"] .projects-section,
+[data-theme="light"] .projects-section {
+    background-color: #f9f9f9 !important;
+}
+
+/* EXPLICIT LIGHT MODE FOR DEBUGGING */
+html[data-theme="light"] * {
+    transition: all 0.3s ease !important;
+}
