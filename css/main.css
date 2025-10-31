@@ -1,16 +1,16 @@
-/* CSS Variables for Light Mode (Default) */
+/* CSS Variables for Dark Mode (Default) */
 :root {
-    --background-color: #ffffff;
-    --text-color: #333333;
-    --card-background: #ffffff;
-    --border-color: #000000;
-    --header-background: #f6e6e0;
-    --footer-background: #f0f0f0;
-    --projects-background: #f9f9f9;
-    --column-background: #f2f2f2;
-    --tool-image-background: #171717;
-    --tool-remarks-background: #292929;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-background: #2d2d2d;
+    --border-color: #444444;
+    --header-background: #2a2a2a;
+    --footer-background: #1f1f1f;
+    --projects-background: #1e1e1e;
+    --column-background: #2d2d2d;
+    --tool-image-background: #0d0d0d;
+    --tool-remarks-background: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Light mode explicit styles */

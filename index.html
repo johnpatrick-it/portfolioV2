@@ -408,8 +408,8 @@
 
         // Initialize theme on page load
         window.addEventListener('load', function() {
-            // Set initial theme
-            const savedTheme = localStorage.getItem('theme') || 'light';
+            // Set initial theme - DEFAULT TO DARK MODE
+            const savedTheme = localStorage.getItem('theme') || 'dark';
             console.log('Initializing with theme:', savedTheme);
 
             document.documentElement.setAttribute('data-theme', savedTheme);
