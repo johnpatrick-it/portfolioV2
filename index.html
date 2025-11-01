@@ -25,7 +25,6 @@
 <body>
     <header>
         <div class="picture-container" onclick="redirectToIndex()">
-            <img class="profile-picture" src="profile.jpg" alt="Your Name">
             <b>&lt;John_Patrick_M._Haguimit&gt;</b>
         </div>
         <div class="social-icons-container moved-down">
@@ -40,6 +39,9 @@
             </a>
             <a href="https://github.com/johnpatrick-it" target="_blank" class="social-button">
                 <i class="fi fi-brands-github"></i>
+            </a>
+            <a href="#" onclick="downloadResume(); return false;" class="social-button">
+                <i class="fi fi-br-download"></i>
             </a>
         </div>
         <div class="button-container">
@@ -415,7 +417,65 @@
                 <div class="contact-info">
                     <h1 class="classic">Let's Connect!</h1>
 
-                    <p class="details">Feel free to reach out if you'd like to connect or discuss potential opportunities!</p>
+                    <!-- Social Media Grid -->
+                    <div class="social-grid">
+                        <a href="mailto:johnpatrickhaguimit@gmail.com" class="social-card email">
+                            <div class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="social-content">
+                                <h4>Email</h4>
+                                <p>johnpatrickhaguimit@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/haguimit-john-patrick-m-58197120b/" target="_blank" class="social-card linkedin">
+                            <div class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="social-content">
+                                <h4>LinkedIn</h4>
+                                <p>Professional Network</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/johnpatrick-it" target="_blank" class="social-card github">
+                            <div class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="social-content">
+                                <h4>GitHub</h4>
+                                <p>Code Portfolio</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.facebook.com/SussyBakkaAt3AM" target="_blank" class="social-card facebook">
+                            <div class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="social-content">
+                                <h4>Facebook</h4>
+                                <p>Personal Updates</p>
+                            </div>
+                        </a>
+
+                        <a href="#" onclick="downloadResume(); return false;" class="social-card resume">
+                            <div class="social-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="social-content">
+                                <h4>Resume</h4>
+                                <p>Download PDF</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-footer">
+                        <p class="contact-tagline">
+                            <i class="fi fi-br-heart"></i>
+                            Death To Quirino Highway!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -453,7 +513,7 @@
         // Dark Mode Toggle - Simplified and Working Version
         function toggleDarkMode() {
             const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme') || 'light';
+            const currentTheme = html.getAttribute('data-theme') || 'dark';
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
             console.log('Toggling from', currentTheme, 'to', newTheme);
@@ -506,8 +566,6 @@
                 darkModeButton.addEventListener('click', toggleDarkMode);
             }
 
-            // Initialize theme button text
-            updateThemeButtonText();
 
             // Debug: Add keyboard shortcuts
             document.addEventListener('keydown', function(e) {
@@ -729,6 +787,18 @@
                 closeProjectModal();
             }
         });
+
+        // Resume download function
+        function downloadResume() {
+            // For now, show an alert. Later you can replace this with actual PDF download
+            alert('Resume download feature coming soon! For now, please contact me directly via email or LinkedIn for my latest resume.');
+
+            // When you have a resume PDF, uncomment this:
+            // const link = document.createElement('a');
+            // link.href = 'path/to/your-resume.pdf';
+            // link.download = 'John_Patrick_Haguimit_Resume.pdf';
+            // link.click();
+        }
 
     </script>
 </body>

@@ -530,39 +530,19 @@ footer p {
     background-color: #f6e6e0;
 }
 
-/* FORCE LIGHT MODE STYLES - HIGH SPECIFICITY */
-html[data-theme="light"] body,
-html[data-theme="light"],
-body[data-theme="light"],
-[data-theme="light"] body {
-    background-color: #ffffff !important;
-    color: #333333 !important;
+/* Light mode contact section specific fixes */
+[data-theme="light"] .social-card {
+    background-color: #ffffff;
+    color: #333333;
+    border-color: var(--border-color);
 }
 
-html[data-theme="light"] header,
-[data-theme="light"] header {
-    background-color: #f6e6e0 !important;
-    color: #333333 !important;
+[data-theme="light"] .contact-footer {
+    background-color: #ffffff;
 }
 
-html[data-theme="light"] .column,
-[data-theme="light"] .column {
-    background-color: #f2f2f2 !important;
-    color: #333333 !important;
-}
-
-html[data-theme="light"] .project-card,
-[data-theme="light"] .project-card {
-    background-color: #ffffff !important;
-    color: #333333 !important;
-}
-
-html[data-theme="light"] .projects-section,
-[data-theme="light"] .projects-section {
-    background-color: #f9f9f9 !important;
-}
-
-/* EXPLICIT LIGHT MODE FOR DEBUGGING */
-html[data-theme="light"] * {
-    transition: all 0.3s ease !important;
+[data-theme="light"] .social-content h4,
+[data-theme="light"] .social-content p,
+[data-theme="light"] .contact-tagline {
+    color: #333333;
 }
