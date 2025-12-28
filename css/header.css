@@ -10,7 +10,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space items evenly along the header */
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+
+    /* Initially hide header */
+    position: fixed;
+    top: -200px; /* Hidden above viewport */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+}
+
+header.visible {
+    top: 0;
+    opacity: 1;
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 .profile-picture {
@@ -135,4 +149,87 @@ header {
     margin-top: 5rem;
 }
 
+/* Scroll Down Indicator */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    cursor: pointer;
+    animation: fadeOut 0.3s ease forwards;
+    opacity: 0;
+    pointer-events: none;
+}
 
+.scroll-indicator.visible {
+    animation: bounce 2s infinite, fadeIn 0.3s ease forwards;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-indicator .arrow {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--header-background);
+    transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover .arrow {
+    transform: scale(1.1);
+    background: var(--text-color);
+}
+
+.scroll-indicator .arrow i {
+    font-size: 24px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover .arrow i {
+    color: var(--header-background);
+}
+
+.scroll-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

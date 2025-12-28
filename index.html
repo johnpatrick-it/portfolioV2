@@ -51,8 +51,17 @@
             <button class="button dark-mode-button">
                 <i data-feather="moon"></i>
             </button>
-        </div> 
+        </div>
     </header>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator visible" id="scrollIndicator">
+        <div class="arrow">
+            <i data-feather="chevron-down"></i>
+        </div>
+        <div class="scroll-text">Scroll Down</div>
+    </div>
+
     <div class="mantra">
         <h1></h1>
         <br>
@@ -553,6 +562,34 @@
         function redirectToIndex(){
             window.location.href = "index.html";
         }
+
+        // Header and Scroll Indicator Logic
+        const header = document.querySelector('header');
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+
+            // Show header after scrolling 200px
+            if (currentScroll > 200) {
+                header.classList.add('visible');
+                scrollIndicator.classList.remove('visible');
+            } else {
+                header.classList.remove('visible');
+                scrollIndicator.classList.add('visible');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll when clicking the indicator
+        scrollIndicator.addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
 
         // Dark Mode Toggle - Simplified and Working Version
         function toggleDarkMode() {
