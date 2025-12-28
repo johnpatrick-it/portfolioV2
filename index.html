@@ -24,13 +24,18 @@
 </head>
 <body>
     <header>
-        <div class="picture-container" onclick="redirectToIndex()">
-            <b>&lt;John_Patrick_M._Haguimit&gt;</b>
+        <div class="name-container">
+            <b>&lt;john_patrick_haguimit&gt;</b>
         </div>
-        <div class="social-icons-container moved-down">
-            <a href="https://www.facebook.com/SussyBakkaAt3AM" target="_blank" class="social-button">
+        <nav class="nav-links">
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+        </nav>
+        <div class="social-icons-container">
+            <!--<a href="https://www.facebook.com/SussyBakkaAt3AM" target="_blank" class="social-button">
                 <i class="fi fi-brands-facebook"></i>
-            </a>
+            </a>-->
             <a href="" target="_blank" class="social-button">
                 <i class="fi fi-br-link-alt"></i>
             </a>
@@ -40,14 +45,14 @@
             <a href="https://github.com/johnpatrick-it" target="_blank" class="social-button">
                 <i class="fi fi-brands-github"></i>
             </a>
-            <a href="#" onclick="downloadResume(); return false;" class="social-button">
+            <!--<a href="#" onclick="downloadResume(); return false;" class="social-button">
                 <i class="fi fi-br-download"></i>
-            </a>
+            </a>-->
         </div>
         <div class="button-container">
-            <button class="button search-button">
-                <i data-feather="search"></i>
-            </button>
+            <a href="#contact" class="button contact-button">
+                Contact Me
+            </a>
             <button class="button dark-mode-button">
                 <i data-feather="moon"></i>
             </button>
@@ -97,7 +102,7 @@
     </div>
     
     <div class="body-content">
-        <section class="about-patrick">
+        <section class="about-patrick" id="about">
                     <h1 class="about"> &lt;<b>ABOUT_ME</b>&gt; </h1>
             <div class="sub-container">
                 <div class="column">
@@ -229,7 +234,7 @@
                     </div>
                 </div>
                 <h1 class="about"> &lt;<b>/ABOUT_ME</b>&gt; </h1>
-                <hr class="border">
+                <hr class="border" id="skills">
                 <h1 class="about"> &lt;<b>SKILLS</b>&gt; </h1>
                 <div class="column">
                     <h2 class="fonts">Technical Skills</h2>
@@ -378,7 +383,7 @@
                     </div>
                 </div>
                     <h1 class="about"> &lt;<b>/SKILLS</b>&gt; </h1>
-                    <hr class="border">
+                    <hr class="border" id="projects">
                     <h1 class="about"> &lt;<b>PROJECTS</b>&gt; </h1>
         </section> 
     </div>
@@ -452,7 +457,7 @@
         </div>
         <h1 class="classic"> &lt;<b>/PROJECTS</b>&gt; </h1>
     </div>
-    <hr class="border">  
+    <hr class="border" id="contact">
         <h1 class="classic"> &lt;<b>CONTACT</b>&gt; </h1>
     <div class="body-content">
         <div class="contact">
