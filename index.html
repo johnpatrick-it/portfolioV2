@@ -67,6 +67,17 @@
         <div class="scroll-text">Scroll Down</div>
     </div>
 
+    <!-- Mobile Warning Popup -->
+    <div id="mobileWarning" class="mobile-warning-overlay">
+        <div class="mobile-warning-content">
+            <h2>😢😢🥀🥀🥀</h2>
+            <h3>Oops this website is optimize for PC only🥀</h3>
+            <p>Do not open this website on phone resolution twin!</p>
+            <p><strong>Worse mistake of my life</strong></p>
+            <button onclick="closeMobileWarning()" class="warning-close-btn">Skibidi toilet</button>
+        </div>
+    </div>
+
     <div class="mantra">
         <h1></h1>
         <br>
@@ -589,6 +600,25 @@
                 behavior: 'smooth'
             });
         });
+
+        // Mobile Warning Popup
+        function checkMobileAndShowWarning() {
+            const mobileWarning = document.getElementById('mobileWarning');
+            const hasSeenWarning = sessionStorage.getItem('mobileWarningShown');
+
+            if (!hasSeenWarning) {
+                mobileWarning.classList.add('show');
+            }
+        }
+
+        function closeMobileWarning() {
+            const mobileWarning = document.getElementById('mobileWarning');
+            mobileWarning.classList.remove('show');
+            sessionStorage.setItem('mobileWarningShown', 'true');
+        }
+
+        // Check on page load
+        window.addEventListener('load', checkMobileAndShowWarning);
 
         // Dark Mode Toggle - Simplified and Working Version
         function toggleDarkMode() {
