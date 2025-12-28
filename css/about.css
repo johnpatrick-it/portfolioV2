@@ -156,9 +156,8 @@
   }
   
     .body-content {
-        margin: 2px;
-        margin-right: 40px;
-        
+        margin: 0;
+        padding: 0 20px;
     }
     .fonts{
         font-family: 'Barlow', sans-serif;
@@ -207,6 +206,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        text-align: center;
       }
       .text-wrapper {
         text-align: left; /* this will align the text to the left */
@@ -228,8 +229,8 @@
 /* Mobile responsive improvements */
 @media only screen and (max-width: 768px) {
     .body-content {
-        margin: 10px;
-        margin-right: 10px;
+        margin: 0;
+        padding: 0 10px;
     }
 
     h1.about, h1.classic {
@@ -672,10 +673,12 @@
 
 /* Contact Section Styles with Integrated Resume */
 .social-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 1200px;
 }
 
 .social-card {
@@ -689,6 +692,9 @@
     transition: all 0.3s ease;
     border: 2px solid transparent;
     cursor: pointer;
+    flex: 1 1 300px;
+    min-width: 280px;
+    max-width: 350px;
 }
 
 .social-card:hover {
@@ -814,7 +820,14 @@
 /* Mobile Responsive Contact */
 @media only screen and (max-width: 768px) {
     .social-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-card {
+        flex: 1 1 100%;
+        max-width: 400px;
+        width: 100%;
     }
 
     .contact-tagline {
