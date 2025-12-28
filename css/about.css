@@ -42,6 +42,57 @@
         83% { color: #9370DB; }     /* Purple */
         100% { color: #FF0000; }    /* Back to Red */
     }
+
+    /* Lovely Text with Gradient */
+    .lovely-text {
+        background: linear-gradient(45deg, #ff6b6b, #ff8e53, #ffd93d, #6bcf7f, #4d96ff, #a78bfa);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 4s ease infinite;
+        font-style: italic;
+        display: inline-block;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Pulsing Heart */
+    .heart-pulse {
+        display: inline-block;
+        animation: heartPulse 1.5s ease-in-out infinite;
+        color: #ff6b6b;
+        -webkit-text-fill-color: #ff6b6b;
+        font-size: 1.2em;
+    }
+
+    @keyframes heartPulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        10% {
+            transform: scale(1.2);
+        }
+        20% {
+            transform: scale(1);
+        }
+        30% {
+            transform: scale(1.2);
+        }
+        40% {
+            transform: scale(1);
+        }
+    }
     .sub-container {
     width: 100%;
     }
