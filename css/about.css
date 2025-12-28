@@ -4,6 +4,44 @@
     font-family: 'Barlow', sans-serif;
     margin-left: 25px ;
     }
+
+    /* Interactive Intro Text Styles */
+    .intro-text {
+        transition: all 0.3s ease;
+        cursor: default;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .intro-text:hover {
+        transform: scale(1.02);
+        color: #667eea;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Christmas Tree Color Changing Effect */
+    .color-changing {
+        animation: christmasColors 3s ease-in-out infinite;
+    }
+
+    @keyframes christmasColors {
+        0% { color: #FF0000; }      /* Red */
+        16% { color: #00FF00; }     /* Green */
+        33% { color: #FFD700; }     /* Gold */
+        50% { color: #00BFFF; }     /* Blue */
+        66% { color: #FF69B4; }     /* Pink */
+        83% { color: #9370DB; }     /* Purple */
+        100% { color: #FF0000; }    /* Back to Red */
+    }
     .sub-container {
     width: 100%;
     }
