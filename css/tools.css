@@ -1,12 +1,12 @@
 .row {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
     justify-content: center; /* This spaces out the columns so they don't touch each other */
     margin: 0 auto; /* Centers the row on the page */
-    width: 252; /* The width of the row relative to its parent element */
+    width: 100%; /* Changed from 252 to 100% for better responsiveness */
     padding: 1rem;
     box-sizing: border-box;
-    
-    
+    gap: 0.5rem; /* Add gap between items for better spacing */
 }
 
 .column-tools {
@@ -72,6 +72,23 @@ a {
 }
 a:hover {
     color: rgb(61, 54, 54);
+}
+
+/* Tablet and medium screen improvements */
+@media only screen and (max-width: 1024px) {
+    .column-tools {
+        width: 220px;
+        margin: 0.5rem;
+    }
+
+    .image {
+        width: 220px;
+        height: 200px;
+    }
+
+    .remarks {
+        width: 220px;
+    }
 }
 
 /* Mobile responsive improvements */
