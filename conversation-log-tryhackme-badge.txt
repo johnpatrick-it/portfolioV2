@@ -1,0 +1,78 @@
+PORTFOLIO UPDATE - TryHackMe Badge Addition
+Date: 2025-12-27
+Repository: portfolioV2
+
+===========================================
+CONVERSATION SUMMARY
+===========================================
+
+INITIAL REQUEST:
+- Add TryHackMe badge iframe underneath Bachelor QCU section
+- Comment out the welcome popup
+
+CHANGES MADE:
+
+1. ADDED TRYHACKME SECTION (index.html:163-173)
+   - Added section title "TryHackMe" with shield icon
+   - Embedded TryHackMe profile badge iframe
+   - URL: https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2233251
+   - Added description about the platform
+   - Positioned between Bachelor's degree and Professional Certifications
+
+2. COMMENTED OUT WELCOME POPUP (index.html:628-631)
+   - Disabled the window.onload popup that showed welcome message
+   - Popup no longer appears when page loads
+
+3. STYLING ADJUSTMENTS
+   - Initial: Centered alignment → Changed to left alignment
+   - Added border and adjusted iframe dimensions
+   - Final dimensions: 330px width x 120px height
+   - Matched course container styling with card background and shadow
+
+4. ADDED CSS HOVER EFFECTS (css/about.css:737-752)
+   - Created .tryhackme-badge-container class
+   - Hover effect: Lifts up 3px (translateY(-3px))
+   - Enhanced shadow on hover (0 8px 25px)
+   - Smooth transition animation (0.3s ease)
+   - Cursor changes to pointer
+
+5. ADDED DESCRIPTION
+   - Text: "Active cybersecurity training platform where I practice penetration testing, ethical hacking, and security fundamentals through hands-on challenges and real-world scenarios."
+   - Uses course-description class for consistent styling
+
+===========================================
+FILES MODIFIED
+===========================================
+
+1. index.html
+   - Lines 163-173: Added TryHackMe section
+   - Lines 628-631: Commented out welcome popup
+
+2. css/about.css
+   - Lines 737-752: Added TryHackMe container styles with hover effects
+
+===========================================
+DESIGN DECISIONS
+===========================================
+
+- Matched existing course container design pattern
+- Used same styling as Google certification cards:
+  * background: var(--card-background)
+  * border-radius: 12px
+  * padding: 1.5rem
+  * box-shadow: 0 4px 6px var(--shadow-color)
+- Consistent hover interactions across all cards
+- Maintains responsive design principles
+
+===========================================
+GIT COMMIT
+===========================================
+
+Commit Hash: b71fd43
+Message: "Add TryHackMe badge section and disable welcome popup"
+Files Changed: 2 files (index.html, css/about.css)
+Stats: 32 insertions(+), 4 deletions(-)
+
+===========================================
+END OF LOG
+===========================================
