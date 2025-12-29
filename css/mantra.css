@@ -28,31 +28,31 @@ h4.process4 {
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
     h2.process2 {
-        font-size: 35px;
+        font-size: 35px !important;
     }
     h3.process3 {
-        font-size: 28px;
+        font-size: 30px !important;
     }
     h4.process4 {
-        font-size: 22px;
+        font-size: 25px !important;
     }
-    .fade-h4 {
-        font-size: 18px;
+    .fade-h4, .fade-h4.fade-out {
+        font-size: 20px !important;
     }
-    .fade-h42 {
-        font-size: 16px;
+    .fade-h42, .fade-h42.fade-out2 {
+        font-size: 16px !important;
     }
-    .fade-h43 {
-        font-size: 12px;
+    .fade-h43, .fade-h43.fade-out3 {
+        font-size: 12px !important;
     }
-    .fade-h44 {
-        font-size: 10px;
+    .fade-h44, .fade-h44.fade-out4 {
+        font-size: 10px !important;
     }
-    .fade-h45 {
-        font-size: 8px;
+    .fade-h45, .fade-h45.fade-out5 {
+        font-size: 8px !important;
     }
-    .fade-h46 {
-        font-size: 6px;
+    .fade-h46, .fade-h46.fade-out6 {
+        font-size: 6px !important;
     }
 }
 
@@ -63,39 +63,39 @@ h4.process4 {
     }
 
     h2.process2 {
-        font-size: 22px;
+        font-size: 28px !important;
         word-break: break-word;
     }
     h3.process3 {
-        font-size: 18px;
+        font-size: 24px !important;
         word-break: break-word;
     }
     h4.process4 {
-        font-size: 16px;
+        font-size: 20px !important;
         word-break: break-word;
     }
-    .fade-h4 {
-        font-size: 13px;
+    .fade-h4, .fade-h4.fade-out {
+        font-size: 16px !important;
         word-break: break-word;
     }
-    .fade-h42 {
-        font-size: 11px;
+    .fade-h42, .fade-h42.fade-out2 {
+        font-size: 13px !important;
         word-break: break-word;
     }
-    .fade-h43 {
-        font-size: 9px;
+    .fade-h43, .fade-h43.fade-out3 {
+        font-size: 10px !important;
         word-break: break-word;
     }
-    .fade-h44 {
-        font-size: 7px;
+    .fade-h44, .fade-h44.fade-out4 {
+        font-size: 8px !important;
         word-break: break-word;
     }
-    .fade-h45 {
-        font-size: 6px;
+    .fade-h45, .fade-h45.fade-out5 {
+        font-size: 6px !important;
         word-break: break-word;
     }
-    .fade-h46 {
-        font-size: 5px;
+    .fade-h46, .fade-h46.fade-out6 {
+        font-size: 5px !important;
         word-break: break-word;
     }
 }
