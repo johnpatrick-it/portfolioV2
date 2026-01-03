@@ -26,23 +26,25 @@ async function loadComponent(url, containerId) {
 }
 
 /**
- * Load all portfolio components in the correct order
- * Components are loaded sequentially to ensure proper DOM structure
+ * Load all portfolio components in parallel for better performance
+ * Components are loaded simultaneously using Promise.all
  * @returns {Promise<void>}
  */
 async function loadAllComponents() {
     try {
-        // Load components in order
-        await loadComponent('components/header.html', 'header-container');
-        await loadComponent('components/scroll-indicator.html', 'scroll-indicator-container');
-        await loadComponent('components/mobile-warning.html', 'mobile-warning-container');
-        await loadComponent('components/mantra.html', 'mantra-container');
-        await loadComponent('components/about.html', 'about-container');
-        await loadComponent('components/skills.html', 'skills-container');
-        await loadComponent('components/projects.html', 'projects-container');
-        await loadComponent('components/contact.html', 'contact-container');
-        await loadComponent('components/footer.html', 'footer-container');
-        await loadComponent('components/modals.html', 'modals-container');
+        // Load all components in parallel for faster page load
+        await Promise.all([
+            loadComponent('components/header.html', 'header-container'),
+            loadComponent('components/scroll-indicator.html', 'scroll-indicator-container'),
+            loadComponent('components/mobile-warning.html', 'mobile-warning-container'),
+            loadComponent('components/mantra.html', 'mantra-container'),
+            loadComponent('components/about.html', 'about-container'),
+            loadComponent('components/skills.html', 'skills-container'),
+            loadComponent('components/projects.html', 'projects-container'),
+            loadComponent('components/contact.html', 'contact-container'),
+            loadComponent('components/footer.html', 'footer-container'),
+            loadComponent('components/modals.html', 'modals-container')
+        ]);
 
         // All components loaded successfully
         console.log('All components loaded successfully');
