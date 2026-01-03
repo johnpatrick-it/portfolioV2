@@ -43,7 +43,45 @@ function initializeImageCarousel() {
     }, 3000);
 }
 
+// About Section Dropdown Functionality
+/**
+ * Toggle about section visibility
+ * @param {HTMLElement} headerElement - The clicked header element
+ */
+function toggleAboutSection(headerElement) {
+    // Get the content element (next sibling of header)
+    const content = headerElement.nextElementSibling;
+
+    // Toggle active class on header (for icon rotation)
+    headerElement.classList.toggle('active');
+
+    // Toggle expanded class on content (for smooth animation)
+    content.classList.toggle('expanded');
+}
+
+/**
+ * Initialize about dropdowns - expand first section by default
+ */
+function initializeAboutDropdowns() {
+    const allSections = document.querySelectorAll('.about-dropdown-section');
+
+    // Expand the first section (Education) by default
+    if (allSections.length > 0) {
+        const firstHeader = allSections[0].querySelector('.about-dropdown-header');
+        const firstContent = allSections[0].querySelector('.about-dropdown-content');
+
+        if (firstHeader && firstContent) {
+            firstHeader.classList.add('active');
+            firstContent.classList.add('expanded');
+        }
+    }
+
+    console.log('About dropdowns initialized');
+}
+
 // Export for use in init.js
 if (typeof window !== 'undefined') {
     window.initializeImageCarousel = initializeImageCarousel;
+    window.toggleAboutSection = toggleAboutSection;
+    window.initializeAboutDropdowns = initializeAboutDropdowns;
 }

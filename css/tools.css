@@ -45,10 +45,68 @@
     border-bottom-left-radius:7px;
     transition: background-color 0.3s ease;
 }
+/* Skill Domain Dropdown Styles */
+.skill-domain {
+    margin: 1rem 0;
+}
+
+.skill-domain-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    background: var(--column-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.skill-domain-header:hover {
+    background: var(--tool-remarks-background);
+    transform: translateY(-2px);
+}
+
+.skill-domain-header:active {
+    transform: translateY(0);
+}
+
+.skill-domain-header h2 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.dropdown-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.skill-domain-header.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.skill-domain-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.skill-domain-content.expanded {
+    max-height: 5000px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.4s ease;
+}
+
 .lang {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 hr.border {
     border: 1px solid var(--border-color);
@@ -119,6 +177,19 @@ a:hover {
     .lang h2 {
         font-size: 18px;
     }
+
+    .skill-domain-header {
+        padding: 0.6rem 1rem;
+    }
+
+    .skill-domain-header h2 {
+        font-size: 18px;
+    }
+
+    .dropdown-icon {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -147,5 +218,18 @@ a:hover {
 
     .lang h2 {
         font-size: 16px;
+    }
+
+    .skill-domain-header {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .skill-domain-header h2 {
+        font-size: 16px;
+    }
+
+    .dropdown-icon {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
     }
 }

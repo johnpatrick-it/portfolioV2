@@ -20,9 +20,19 @@ function initializeComponents() {
         window.initializeImageCarousel();
     }
 
+    // Initialize about section dropdowns
+    if (typeof window.initializeAboutDropdowns === 'function') {
+        window.initializeAboutDropdowns();
+    }
+
     // Initialize project modals
     if (typeof window.initializeProjectModals === 'function') {
         window.initializeProjectModals();
+    }
+
+    // Initialize skills dropdowns
+    if (typeof window.initializeSkillDropdowns === 'function') {
+        window.initializeSkillDropdowns();
     }
 
     // Initialize mobile warning
