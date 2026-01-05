@@ -20,11 +20,6 @@ function initializeComponents() {
         window.initializeImageCarousel();
     }
 
-    // Initialize about section dropdowns
-    if (typeof window.initializeAboutDropdowns === 'function') {
-        window.initializeAboutDropdowns();
-    }
-
     // Initialize project modals
     if (typeof window.initializeProjectModals === 'function') {
         window.initializeProjectModals();
