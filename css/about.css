@@ -374,6 +374,15 @@
     /* No overrides - inherits all from .column */
 }
 
+/* Dropdown styling for about section */
+.education-section .skill-domain {
+    margin: 1rem 0;
+}
+
+.education-section .skill-domain:first-child {
+    margin-top: 0;
+}
+
 .education-card {
     background: var(--card-background);
     border-radius: 10px;

@@ -18,23 +18,13 @@ function toggleSkillDomain(headerElement) {
 
 /**
  * Initialize all skill domains to be collapsed on page load
- * Optionally expand the first domain for better UX
  */
 function initializeSkillDropdowns() {
     const allDomains = document.querySelectorAll('.skill-domain');
 
-    // Optional: Expand the first domain by default
-    if (allDomains.length > 0) {
-        const firstHeader = allDomains[0].querySelector('.skill-domain-header');
-        const firstContent = allDomains[0].querySelector('.skill-domain-content');
+    // All domains start collapsed - users can expand as needed
 
-        if (firstHeader && firstContent) {
-            firstHeader.classList.add('active');
-            firstContent.classList.add('expanded');
-        }
-    }
-
-    console.log('Skills dropdown initialized');
+    console.log('Skills dropdown initialized - all domains collapsed');
 }
 
 // Make functions available globally

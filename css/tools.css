@@ -57,15 +57,18 @@
     cursor: pointer;
     padding: 0.8rem 1.5rem;
     background: var(--column-background);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     transition: all 0.3s ease;
     user-select: none;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
 }
 
 .skill-domain-header:hover {
     background: var(--tool-remarks-background);
     transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.5);
+    border-color: var(--border-color);
 }
 
 .skill-domain-header:active {
@@ -78,12 +81,18 @@
     text-align: center;
 }
 
+.dropdown-spacer {
+    width: 1.2rem;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
 .dropdown-icon {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
     color: var(--text-color);
     flex-shrink: 0;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 .skill-domain-header.active .dropdown-icon {
@@ -109,7 +118,7 @@
     align-items: center;
 }
 hr.border {
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     transition: border-color 0.3s ease;
 }
 .phead{
@@ -186,6 +195,11 @@ a:hover {
         font-size: 18px;
     }
 
+    .dropdown-spacer {
+        width: 1rem;
+        margin-right: 0.5rem;
+    }
+
     .dropdown-icon {
         font-size: 1rem;
         margin-left: 0.5rem;
@@ -226,6 +240,11 @@ a:hover {
 
     .skill-domain-header h2 {
         font-size: 16px;
+    }
+
+    .dropdown-spacer {
+        width: 0.9rem;
+        margin-right: 0.5rem;
     }
 
     .dropdown-icon {
