@@ -105,10 +105,11 @@ header.visible {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Add styles for the div containing the buttons and social icons */
-.button-container, .social-icons-container {
+/* Add styles for the div containing the buttons */
+.button-container {
     display: inline-flex;
     align-items: center;
+    gap: 0.8rem;
 }
 
 /* Add styles for the buttons */
@@ -131,33 +132,6 @@ header.visible {
     opacity: 0.5;
 }
 
-/* Add styles for the social icons */
-.social-icons-container {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 13rem; /* Add some spacing between the social icons and buttons */
-}
-
-.social-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: transparent;
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.1rem; /* Add some spacing between the social icons */
-    transition: opacity 0.3s, color 0.3s ease, background-color 0.3s ease; /* Add transition effect for opacity change */
-}
-
-/* Add hover effect for social icons */
-.social-button:hover {
-    background-color: #f6e6e0;
-    opacity: 0.5; /* Adjust the opacity on hover */
-}
 
 /* Tablet responsive */
 @media only screen and (max-width: 1024px) {
@@ -167,10 +141,6 @@ header.visible {
 
     .nav-links {
         gap: 1.5rem;
-    }
-
-    .social-icons-container {
-        margin-right: 6rem;
     }
 
     .nav-link {
@@ -212,11 +182,6 @@ header.visible {
         font-size: 0.9rem;
     }
 
-    .social-icons-container {
-        margin-right: 0;
-        gap: 0.3rem;
-    }
-
     .button-container {
         display: flex;
         gap: 0.5rem;
@@ -245,12 +210,6 @@ header.visible {
 
     .nav-link {
         font-size: 0.85rem;
-    }
-
-    .social-button {
-        width: 26px;
-        height: 26px;
-        margin-right: 0.2rem;
     }
 
     .button {

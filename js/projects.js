@@ -51,44 +51,41 @@ function openProjectModal(projectId) {
             `;
             break;
 
-        case 'webdev':
+        case 'password-checker':
             content = `
                 <div class="project-modal-header">
-                    <h2>Web Development Project</h2>
+                    <h2>Password Security Checker</h2>
                 </div>
                 <div class="project-modal-body">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                        <div style="text-align: center; color: white;">
-                            <i class="fi fi-br-clock" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3>Coming Soon!</h3>
-                        </div>
-                    </div>
-
-                    <p>Currently in development! This will be a full-stack web application showcasing advanced development skills.</p>
+                    <img src="PNG/password-checker.png" alt="Password Security Checker" class="project-modal-image">
+                    <p>A high-performance Flask application that analyzes password strength in real-time, providing instant feedback on password security and checking against known data breaches.</p>
 
                     <div class="project-features">
-                        <h3>Planned Features:</h3>
+                        <h3>Key Features:</h3>
                         <ul>
-                            <li>User authentication and authorization</li>
-                            <li>Database integration with MySQL</li>
-                            <li>RESTful API design</li>
-                            <li>Responsive frontend interface</li>
-                            <li>Admin dashboard functionality</li>
-                            <li>Security best practices implementation</li>
+                            <li>Real-time password strength analysis</li>
+                            <li>Breach checking via HaveIBeenPwned API</li>
+                            <li>Fast response times with optimized performance</li>
+                            <li>Clean, modern UI built with Tailwind CSS</li>
+                            <li>Secure password handling with best practices</li>
+                            <li>Visual strength indicators and feedback</li>
+                            <li>Deployed on Fly.io for high availability</li>
                         </ul>
                     </div>
 
                     <div class="project-features">
-                        <h3>Technology Stack:</h3>
+                        <h3>Technologies Used:</h3>
                         <ul>
-                            <li>PHP with Laravel framework</li>
-                            <li>MySQL database</li>
-                            <li>Bootstrap for responsive design</li>
-                            <li>JavaScript for dynamic interactions</li>
+                            <li>Python 3.14.0 for backend logic</li>
+                            <li>Flask 3.1.2 web framework</li>
+                            <li>HTML5 for semantic structure</li>
+                            <li>Tailwind CSS for responsive design</li>
+                            <li>Vanilla JavaScript for interactivity</li>
+                            <li>HaveIBeenPwned API integration</li>
                         </ul>
                     </div>
 
-                    <p><strong>Status:</strong> In planning and early development phase. Expected completion by Q2 2024.</p>
+                    <p><strong>Development Highlights:</strong> Built with security and performance in mind, this project demonstrates practical cybersecurity knowledge and full-stack development skills. The application is deployed and accessible for live testing.</p>
                 </div>
             `;
             break;
