@@ -71,6 +71,23 @@
     border-color: var(--border-color);
 }
 
+[data-theme="light"] .skill-domain-header:hover {
+    background: #e8e8e8;
+    box-shadow: 0 0 15px rgba(150, 150, 150, 0.4);
+}
+
+[data-theme="light"] .column-tools {
+    border-color: #990606;
+}
+
+[data-theme="light"] .phead {
+    color: #666;
+}
+
+[data-theme="light"] .pbody {
+    color: #888;
+}
+
 .skill-domain-header:active {
     transform: translateY(0);
 }
@@ -139,6 +156,10 @@ a {
 }
 a:hover {
     color: rgb(61, 54, 54);
+}
+
+[data-theme="light"] a:hover {
+    color: #2c5282;
 }
 
 /* Tablet and medium screen improvements */

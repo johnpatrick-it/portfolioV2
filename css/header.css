@@ -106,6 +106,17 @@ header.visible {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme="light"] .contact-button:hover {
+    background: #2c5282 !important;
+    color: white;
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+}
+
+[data-theme="light"] .contact-button {
+    border-color: #2c5282 !important;
+    color: #2c5282;
+}
+
 /* Add styles for the div containing the buttons */
 .button-container {
     display: inline-flex;

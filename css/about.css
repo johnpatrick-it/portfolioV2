@@ -17,6 +17,22 @@
         color: #667eea;
     }
 
+    [data-theme="light"] .intro-text:hover {
+        color: #5568d3;
+    }
+
+    [data-theme="light"] .education-card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    [data-theme="light"] .tryhackme-badge-container:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    [data-theme="light"] .contact:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
     @keyframes fadeInUp {
         from {
             opacity: 0;

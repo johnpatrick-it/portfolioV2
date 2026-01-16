@@ -555,6 +555,59 @@ footer p {
     color: #333333;
 }
 
+/* Light mode project section fixes */
+[data-theme="light"] .project-description {
+    color: #555555;
+}
+
+[data-theme="light"] .tech-tag {
+    background: #d1e7f5;
+    color: #1a4d7a;
+}
+
+[data-theme="light"] .project-link {
+    background: #2c5282;
+    color: white;
+}
+
+[data-theme="light"] .project-link:hover {
+    background: #1e3a5f;
+    color: white;
+}
+
+[data-theme="light"] .project-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode contact hover fixes */
+[data-theme="light"] .social-card:hover.email {
+    background: rgba(234, 67, 53, 0.15);
+}
+
+[data-theme="light"] .social-card:hover.linkedin {
+    background: rgba(0, 119, 181, 0.15);
+}
+
+[data-theme="light"] .social-card:hover.github {
+    background: rgba(51, 51, 51, 0.15);
+}
+
+[data-theme="light"] .social-card:hover.facebook {
+    background: rgba(24, 119, 242, 0.15);
+}
+
+[data-theme="light"] .social-card:hover.resume {
+    background: rgba(255, 107, 53, 0.15);
+}
+
+[data-theme="light"] .social-card.github {
+    border-color: #666;
+}
+
+[data-theme="light"] .social-card.github .social-icon {
+    background: #666;
+}
+
 /* Mobile Warning Popup */
 .mobile-warning-overlay {
     display: none;
