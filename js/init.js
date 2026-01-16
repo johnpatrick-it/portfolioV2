@@ -15,6 +15,11 @@ function initializeComponents() {
         window.initializeHeader();
     }
 
+    // Initialize dark mode toggle
+    if (typeof window.initializeDarkMode === 'function') {
+        window.initializeDarkMode();
+    }
+
     // Initialize image carousel in about section
     if (typeof window.initializeImageCarousel === 'function') {
         window.initializeImageCarousel();

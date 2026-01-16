@@ -98,9 +98,12 @@ function initializeDarkMode() {
     });
 }
 
-// Initialize dark mode early
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeDarkMode);
-} else {
-    initializeDarkMode();
+// Make functions available globally
+if (typeof window !== 'undefined') {
+    window.toggleDarkMode = toggleDarkMode;
+    window.initializeDarkMode = initializeDarkMode;
 }
+
+// Initialize dark mode early to set the theme before page render
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
