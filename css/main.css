@@ -5,18 +5,18 @@ html {
 
 /* CSS Variables for Dark Mode (Default) */
 :root {
-    --background-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --card-background: #2d2d2d;
-    --border-color: #444444;
-    --header-background: #2a2a2a;
-    --header-background-rgb: 42, 42, 42;
-    --footer-background: #1f1f1f;
-    --projects-background: #1e1e1e;
-    --column-background: #2d2d2d;
-    --tool-image-background: #0d0d0d;
-    --tool-remarks-background: #1a1a1a;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --background-color: #0f1117;
+    --text-color: #e2e4ea;
+    --card-background: #1a1d2e;
+    --border-color: #2a3050;
+    --header-background: #161927;
+    --header-background-rgb: 22, 25, 39;
+    --footer-background: #0c0e15;
+    --projects-background: #12141e;
+    --column-background: #1a1d2e;
+    --tool-image-background: #0a0c14;
+    --tool-remarks-background: #12141e;
+    --shadow-color: rgba(15, 17, 23, 0.5);
 }
 
 /* Light mode explicit styles */
@@ -36,18 +36,18 @@ html {
 }
 
 [data-theme="dark"] {
-    --background-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --card-background: #2d2d2d;
-    --border-color: #061E29;
-    --header-background: #2a2a2a;
-    --header-background-rgb: 42, 42, 42;
-    --footer-background: #1f1f1f;
-    --projects-background: #1e1e1e;
-    --column-background: #2d2d2d;
-    --tool-image-background: #0d0d0d;
-    --tool-remarks-background: #1a1a1a;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+    --background-color: #0f1117;
+    --text-color: #e2e4ea;
+    --card-background: #1a1d2e;
+    --border-color: #2a3050;
+    --header-background: #161927;
+    --header-background-rgb: 22, 25, 39;
+    --footer-background: #0c0e15;
+    --projects-background: #12141e;
+    --column-background: #1a1d2e;
+    --tool-image-background: #0a0c14;
+    --tool-remarks-background: #12141e;
+    --shadow-color: rgba(15, 17, 23, 0.5);
 }
 
 /* Apply theme variables to body */
@@ -111,7 +111,7 @@ footer p {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #1a1d2e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -119,7 +119,7 @@ footer p {
 }
 
 #btnClose:hover {
-    background-color: #555;
+    background-color: #252840;
 }
 
 /* Responsive improvements */
@@ -254,7 +254,7 @@ footer p {
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
-    background: #333;
+    background: #1a1d2e;
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -264,7 +264,7 @@ footer p {
 }
 
 .project-link:hover {
-    background: #555;
+    background: #252840;
     color: white;
 }
 
@@ -455,6 +455,27 @@ footer p {
     box-shadow: 0 12px 30px var(--shadow-color);
 }
 
+/* Highlight project link buttons on card hover */
+.project-card:hover .project-link:not(.disabled) {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.project-card:hover .project-link:not(.disabled):hover {
+    background: #5568d3;
+}
+
+[data-theme="light"] .project-card:hover .project-link:not(.disabled) {
+    background: #4a5fd6;
+    color: white;
+    box-shadow: 0 2px 8px rgba(74, 95, 214, 0.3);
+}
+
+[data-theme="light"] .project-card:hover .project-link:not(.disabled):hover {
+    background: #3a4fc6;
+}
+
 /* Responsive project modal */
 @media only screen and (max-width: 768px) {
     .project-modal-content {
@@ -480,32 +501,32 @@ footer p {
 }
 
 [data-theme="dark"] .tech-tag {
-    background: #2a4a5a;
-    color: #87ceeb;
+    background: #1e2545;
+    color: #8fa8f0;
 }
 
 [data-theme="dark"] .coming-soon {
-    background: linear-gradient(135deg, #4a5568 0%, #553c9a 100%);
+    background: linear-gradient(135deg, #2a3050 0%, #4a3a8a 100%);
 }
 
 [data-theme="dark"] .social-button:hover {
-    background-color: #444;
+    background-color: #252840;
 }
 
 [data-theme="dark"] .phead {
-    color: #999;
+    color: #9ba2b8;
 }
 
 [data-theme="dark"] .pbody {
-    color: #ccc;
+    color: #c5c9d6;
 }
 
 [data-theme="dark"] a {
-    color: #87ceeb;
+    color: #8fa8f0;
 }
 
 [data-theme="dark"] a:hover {
-    color: #add8e6;
+    color: #b0c4f5;
 }
 
 /* Light mode specific adjustments for better contrast */
