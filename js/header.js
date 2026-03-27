@@ -5,26 +5,43 @@ function initializeHeader() {
     const header = document.querySelector('header');
     const scrollIndicator = document.getElementById('scrollIndicator');
     let lastScroll = 0;
+    let scrollTimer = null;
 
     if (!header) {
         console.warn('Header element not found');
         return;
     }
 
+    // Start the delayed reveal of scroll indicator
+    function startScrollTimer() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+            if (scrollIndicator && window.pageYOffset < 200) {
+                scrollIndicator.classList.add('visible');
+            }
+        }, 3000);
+    }
+
+    // Kick off initial timer
+    if (scrollIndicator && window.pageYOffset < 200) {
+        startScrollTimer();
+    }
+
     // Handle scroll events
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
 
-        // Show header after scrolling 200px
         if (currentScroll > 200) {
             header.classList.add('visible');
             if (scrollIndicator) {
                 scrollIndicator.classList.remove('visible');
+                clearTimeout(scrollTimer);
             }
         } else {
             header.classList.remove('visible');
-            if (scrollIndicator) {
-                scrollIndicator.classList.add('visible');
+            // Reset timer when scrolling back to top
+            if (scrollIndicator && !scrollIndicator.classList.contains('visible')) {
+                startScrollTimer();
             }
         }
 
